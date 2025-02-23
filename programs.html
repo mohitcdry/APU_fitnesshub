@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>APU Fitness Hub - Programs</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		/>
+	</head>
+	<body>
+		<nav class="navbar">
+			<a href="index.html" class="logo">
+				<img src="images/logo.png" alt="APU Fitness Logo" />
+			</a>
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="programs.html">Programs</a></li>
+				<li><a href="events.html">Events</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			<div class="hamburger">☰</div>
+		</nav>
+
+		<main class="hero">
+			<h1
+				class="section-title"
+				style="color: white; margin-bottom: 100px"
+			>
+				Fitness Programs & Resources
+			</h1>
+
+			<section class="programs-section">
+				<div class="calculator-grid">
+					<!-- BMI Calculator -->
+					<div class="calculator-card">
+						<h3><i class="fas fa-weight"></i>BMI Calculator</h3>
+						<div class="input-group">
+							<label>Weight (kg)</label>
+							<input type="number" id="weight" step="0.1" />
+						</div>
+						<div class="input-group">
+							<label>Height (ft)</label>
+							<input type="number" id="heightFt" step="0.01" />
+						</div>
+						<button class="calculator-btn" onclick="calculateBMI()">
+							Calculate BMI
+						</button>
+						<div class="result-display" id="bmi-result"></div>
+					</div>
+
+					<!-- Workout Timer -->
+					<div class="calculator-card">
+						<h3><i class="fas fa-stopwatch"></i>Workout Timer</h3>
+						<div class="timer-display" id="timer-display">
+							20:00
+						</div>
+						<div class="timer-controls">
+							<button
+								class="timer-btn primary"
+								onclick="startTimer(20)"
+							>
+								Start
+							</button>
+							<button
+								class="timer-btn danger"
+								onclick="stopTimer()"
+							>
+								Stop
+							</button>
+							<button
+								class="timer-btn secondary"
+								onclick="resetTimer()"
+							>
+								Reset
+							</button>
+						</div>
+					</div>
+
+					<!-- Calorie Calculator -->
+					<div class="calculator-card">
+						<h3>
+							<i class="fas fa-calculator"></i>Calorie Calculator
+						</h3>
+						<div class="input-group">
+							<label>Age</label>
+							<input type="number" id="age" />
+						</div>
+						<div class="input-group">
+							<label>Weight (kg)</label>
+							<input type="number" id="cal-weight" />
+						</div>
+						<div class="input-group">
+							<label>Height (ft)</label>
+							<input type="number" id="cal-height" />
+						</div>
+						<div class="input-group">
+							<label>Activity Level</label>
+							<select id="activity">
+								<option value="1.2">Sedentary</option>
+								<option value="1.375">Light Activity</option>
+								<option value="1.55">Moderate Activity</option>
+							</select>
+						</div>
+						<button
+							class="calculator-btn"
+							onclick="calculateCalories()"
+						>
+							Calculate
+						</button>
+						<div class="result-display" id="calorie-result"></div>
+					</div>
+				</div>
+			</section>
+
+			<section class="programs-section">
+				<h2 class="section-subtitle">Fitness Resources</h2>
+				<div class="resource-grid">
+					<a href="docs/apu_meal-plans.pdf" class="value-card">
+						<i class="fas fa-utensils value-icon"></i>
+						<h3>Nutrition Guide</h3>
+						<p>4-week customized meal plans for optimal fitness</p>
+					</a>
+					<a
+						href="docs/apu_workout-routines.pdf"
+						class="value-card"
+					>
+						<i class="fas fa-dumbbell value-icon"></i>
+						<h3>Workout Plans</h3>
+						<p>Beginner to advanced exercise routines</p>
+					</a>
+					<a href="#" class="value-card">
+						<i class="fas fa-video value-icon"></i>
+						<h3>Video Guides</h3>
+						<p>Proper technique demonstrations</p>
+					</a>
+					<a href="events.html" class="value-card">
+						<i class="fas fa-calendar-alt value-icon"></i>
+						<h3>Event Calendar</h3>
+						<p>Upcoming workshops & classes</p>
+					</a>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="footer-container">
+				<div class="footer-brand">
+					<img
+						src="images/logo.png"
+						alt="Fitness Hub Logo"
+						class="footer-logo"
+					/>
+					<p class="footer-tagline">Empowering Student Wellness</p>
+					<div class="social-links">
+						<a href="#" aria-label="Facebook"
+							><i class="fab fa-facebook"></i
+						></a>
+						<a href="#" aria-label="Instagram"
+							><i class="fab fa-instagram"></i
+						></a>
+						<a href="#" aria-label="Twitter"
+							><i class="fab fa-twitter"></i
+						></a>
+						<a href="#" aria-label="YouTube"
+							><i class="fab fa-youtube"></i
+						></a>
+					</div>
+				</div>
+
+				<!-- Quick Links -->
+				<div class="footer-nav">
+					<h4 class="footer-heading">Quick Links</h4>
+					<ul>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="programs.html">Programs</a></li>
+						<li><a href="events.html">Events Calendar</a></li>
+						<li><a href="membership.html">Membership</a></li>
+						<li><a href="faq.html">FAQ</a></li>
+						<!-- FAQ Link -->
+					</ul>
+				</div>
+
+				<!-- Contact Info -->
+				<div class="footer-contact">
+					<h4 class="footer-heading">Get in Touch</h4>
+					<ul>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> APU Campus,
+							Bukit Jalil
+						</li>
+						<li><i class="fas fa-phone"></i> +60 12-345 6789</li>
+						<li>
+							<i class="fas fa-envelope"></i> fitness@apu.edu.my
+						</li>
+					</ul>
+				</div>
+
+				<!-- Newsletter -->
+				<div class="footer-newsletter">
+					<h4 class="footer-heading">Stay Updated</h4>
+					<form class="newsletter-form">
+						<input
+							type="email"
+							placeholder="Enter your email"
+							required
+						/>
+						<button type="submit" class="btn-subscribe">
+							Subscribe
+						</button>
+					</form>
+					<p class="newsletter-note">
+						Get fitness tips and event updates
+					</p>
+				</div>
+			</div>
+
+			<!-- Copyright & Legal -->
+			<div class="footer-legal">
+				<p>&copy; 2024 APU Fitness Hub. All rights reserved</p>
+				<div class="legal-links">
+					<a href="privacy.html">Privacy Policy</a>
+					<a href="terms.html">Terms of Service</a>
+				</div>
+			</div>
+		</footer>
+		<script src="js/script.js"></script>
+	</body>
+</html>

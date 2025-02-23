@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contact Us - APU Fitness Hub</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+		/>
+		<style>
+            .contact-container {
+                max-width: 1200px;
+                margin: 2rem auto;
+                padding: 0 1rem;
+            }
+        
+            .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Equal columns */
+    gap: 2rem;
+    margin: 2rem 0;
+    align-items: start; /* Align cards at the top */
+}
+        
+            .contact-card {
+                background: white;
+                border-radius: 20px;
+                padding: 2rem;
+                box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease;
+            }
+        
+            .info-cards {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        
+            .info-card {
+                padding: 1.5rem;
+                border-radius: 15px;
+                background: #f8f9fa;
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+                transition: all 0.3s ease;
+            }
+        
+            .info-card:hover {
+                transform: translateX(10px);
+                box-shadow: 0 4px 12px rgba(46, 204, 113, 0.1);
+            }
+        
+            .info-card i {
+                font-size: 1.8rem;
+                color: #2ecc71;
+                min-width: 40px;
+                text-align: center;
+            }
+        
+            .contact-form {
+                display: grid;
+                gap: 1.5rem;
+            }
+        
+            .form-group {
+                position: relative;
+            }
+        
+            .form-group label {
+                display: block;
+                margin-bottom: 0.8rem;
+                color: #2c3e50;
+                font-weight: 600;
+                font-size: 0.95rem;
+            }
+        
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                width: 100%;
+                padding: 1rem;
+                border: 2px solid #e0e0e0;
+                border-radius: 12px;
+                font-size: 1rem;
+                transition: all 0.3s ease;
+                background: #f8f9fa;
+            }
+        
+            .form-group input:focus,
+            .form-group select:focus,
+            .form-group textarea:focus {
+                border-color: #2ecc71;
+                background: white;
+                outline: none;
+                box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.1);
+            }
+        
+            .submit-btn i {
+                font-size: 1.2rem;
+            }
+        
+            @media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr; 
+    }
+
+            }
+        </style>
+	</head>
+	<body>
+		<nav class="navbar">
+			<a href="index.html" class="logo"
+				><img src="images/logo.png" alt="APU Fitness Logo"
+			/></a>
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="programs.html">Programs</a></li>
+				<li><a href="events.html">Events</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			<div class="hamburger">☰</div>
+		</nav>
+
+		<div class="hero">
+			<h1>Get in Touch</h1>
+			<p>
+				We'd love to hear from you! Reach out for questions, feedback,
+				or partnership opportunities.
+			</p>
+		</div>
+
+		<div class="contact-container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h2 style="margin-bottom: 2rem; color: #2c3e50;">Contact Information</h2>
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3 style="margin: 0 0 0.5rem; color: #2c3e50;">Phone Number</h3>
+                                <p style="margin: 0; color: #666;">+60 12-345 6789</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3 style="margin: 0 0 0.5rem; color: #2c3e50;">Email Address</h3>
+                                <p style="margin: 0; color: #666;">contact@apufitness.edu.my</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3 style="margin: 0 0 0.5rem; color: #2c3e50;">Our Location</h3>
+                                <p style="margin: 0; color: #666;">APU Campus, Bukit Jalil</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div>
+                                <p> <img style="width: 160px; margin-left:60px;" src="images/logo.png" alt=""></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        
+                <div class="contact-card">
+                    <h2 style="margin-bottom: 2rem; color: #2c3e50;">Send Us a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Enter your name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="Enter your email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <select required>
+                                <option value="">Select a subject</option>
+                                <option>Membership Inquiry</option>
+                                <option>Program Information</option>
+                                <option>Event Registration</option>
+                                <option>General Feedback</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Your Message</label>
+                            <textarea rows="5" placeholder="Type your message here..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+			<div class="map-container">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.1055843510537!2d101.70087607454799!3d3.0549745536064752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4abb8faa8361%3A0x9ed7cbaca43a80f!2sAsia%20Pacific%20University%20of%20Technology%20%26%20Innovation%20(APU)!5e0!3m2!1sen!2smy!4v1699020526343!5w!5i0"
+					width="100%"
+					height="450"
+					style="border: 0"
+					allowfullscreen=""
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"
+				>
+				</iframe>
+			</div>
+		</div>
+
+                    <!-- ====Footer=== -->
+
+		<footer class="site-footer">
+			<div class="footer-container">
+				<div class="footer-brand">
+					<img
+						src="images/logo.png"
+						alt="Fitness Hub Logo"
+						class="footer-logo"
+					/>
+					<p class="footer-tagline">Empowering Student Wellness</p>
+					<div class="social-links">
+						<a href="#" aria-label="Facebook"
+							><i class="fab fa-facebook"></i
+						></a>
+						<a href="#" aria-label="Instagram"
+							><i class="fab fa-instagram"></i
+						></a>
+						<a href="#" aria-label="Twitter"
+							><i class="fab fa-twitter"></i
+						></a>
+						<a href="#" aria-label="YouTube"
+							><i class="fab fa-youtube"></i
+						></a>
+					</div>
+				</div>
+
+				<div class="footer-nav">
+					<h4 class="footer-heading">Quick Links</h4>
+					<ul>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="programs.html">Programs</a></li>
+						<li><a href="events.html">Events Calendar</a></li>
+						<li><a href="membership.html">Membership</a></li>
+						<li><a href="faq.html">FAQ</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-contact">
+					<h4 class="footer-heading">Get in Touch</h4>
+					<ul>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> APU Campus,
+							Bukit Jalil
+						</li>
+						<li><i class="fas fa-phone"></i> +60 12-345 6789</li>
+						<li>
+							<i class="fas fa-envelope"></i> fitness@apu.edu.my
+						</li>
+					</ul>
+				</div>
+
+				<!-- Newsletter -->
+				<div class="footer-newsletter">
+					<h4 class="footer-heading">Stay Updated</h4>
+					<form class="newsletter-form">
+						<input
+							type="email"
+							placeholder="Enter your email"
+							required
+						/>
+						<button type="submit" class="btn-subscribe">
+							Subscribe
+						</button>
+					</form>
+					<p class="newsletter-note">
+						Get fitness tips and event updates
+					</p>
+				</div>
+			</div>
+
+			<!-- Copyright & Legal -->
+			<div class="footer-legal">
+				<p>&copy; 2024 APU Fitness Hub. All rights reserved</p>
+				<div class="legal-links">
+					<a href="privacy.html">Privacy Policy</a>
+					<a href="terms.html">Terms of Service</a>
+				</div>
+			</div>
+		</footer>
+		<script src="js/script.js"></script>
+	</body>
+</html>

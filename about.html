@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>About Us - APU Fitness Hub</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+		/>
+
+		<style>
+			/* Additional Styles for Enhanced About Page */
+			.about-content {
+				max-width: 1200px;
+				margin: 2rem auto;
+				padding: 0 1rem;
+			}
+
+			.mission-vision {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 2rem;
+				margin: 3rem 0;
+			}
+
+			.core-values {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 2rem;
+				margin: 3rem 0;
+			}
+
+			.value-icon {
+				font-size: 2.5rem;
+				color: #2ecc71;
+				margin-bottom: 1rem;
+			}
+
+			.stats-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+				gap: 2rem;
+				margin: 3rem 0;
+				text-align: center;
+			}
+
+			.stat-number {
+				font-size: 2.5rem;
+				font-weight: bold;
+				color: #2ecc71;
+			}
+
+			.team-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 2rem;
+				margin: 3rem 0;
+			}
+
+			.member {
+				background: white;
+				padding: 1.5rem;
+				border-radius: 15px;
+				text-align: center;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				min-height: 550px;
+			}
+
+			.member img {
+				width: 100%;
+				height: 300px;
+				object-fit: cover;
+				border-radius: 10px;
+				margin-bottom: 1rem;
+			}
+
+			.impact-stats {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 3rem;
+			}
+
+			.impact-card {
+				background: white;
+				padding: 2rem;
+				border-radius: 20px;
+				box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+				transition: transform 0.3s ease;
+			}
+
+			.impact-card:hover {
+				transform: translateY(-5px);
+			}
+
+			.stats-grid {
+				background: white;
+				padding: 3rem;
+				border-radius: 15px;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+			}
+
+			.stat-number {
+				font-size: 3.5rem;
+				font-weight: bold;
+				background: var(--gradient);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				margin-bottom: 0.5rem;
+			}
+
+
+			@media (max-width: 768px) {
+				.mission-vision {
+					grid-template-columns: 1fr;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar">
+			<a href="index.html" class="logo"
+				><img src="images/logo.png" alt="APU Fitness Logo"
+			/></a>
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="programs.html">Programs</a></li>
+				<li><a href="events.html">Events</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			<div class="hamburger">☰</div>
+		</nav>
+
+		<div class="hero">
+			<h1>About APU Fitness Hub</h1>
+			<p>Your Campus Gateway to Health, Wellness, and Peak Performance</p>
+		</div>
+
+		<div class="about-content">
+			<!-- Our Story Section -->
+			<section class="mission-vision">
+				<div class="story-card">
+					<h2>Our Story</h2>
+					<p>
+						Established in 2020, APU Fitness Hub began as a student
+						initiative to promote health and wellness on campus.
+						What started as a small gym with 3 cardio machines has
+						grown into a 5,000 sq. ft. fitness complex serving
+						2,000+ students annually.
+					</p>
+				</div>
+				<div class="achievement-card">
+					<h2>Why Choose Us?</h2>
+					<ul class="bullet-point">
+						<li>🏋️ Student-focused programming</li>
+						<li>🎓 Certified university trainers</li>
+						<li>💵 Affordable student memberships</li>
+						<li>🏆 2023 Best Campus Gym Award</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- Mission & Vision Section -->
+			<section class="mission-vision">
+				<div class="mission">
+					<h2>
+						<i class="fas fa-bullseye value-icon"></i> Our Mission
+					</h2>
+					<p>
+						To empower APU students with accessible fitness
+						resources, science-backed training programs, and a
+						supportive community that fosters both physical and
+						mental well-being.
+					</p>
+				</div>
+				<div class="vision">
+					<h2><i class="fas fa-eye value-icon"></i> Our Vision</h2>
+					<p>
+						To become Malaysia's leading university fitness center,
+						recognized for innovative wellness programs that help
+						students achieve academic success through physical
+						fitness.
+					</p>
+				</div>
+			</section>
+
+			<!-- Core Values Section -->
+			<section>
+				<h2>Our Core Values</h2>
+				<div class="core-values">
+					<div class="value-card">
+						<i class="fas fa-heartbeat value-icon"></i>
+						<h3>Holistic Health</h3>
+						<p style="color: black;">
+							Integrating physical fitness with mental wellness
+							through mindfulness sessions and stress management
+							workshops.
+						</p>
+					</div>
+					<div class="value-card">
+						<i class="fas fa-users value-icon"></i>
+						<h3>Community First</h3>
+						<p style="color: black;">
+							Building an inclusive environment where students of
+							all fitness levels feel welcome and supported.
+						</p>
+					</div>
+					<div class="value-card">
+						<i class="fas fa-flask value-icon"></i>
+						<h3>Evidence-Based Training</h3>
+						<p style="color: black;">
+							Programs designed using latest exercise science
+							research and nutrition studies.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Stats Section -->
+			<section>
+				<h2>By The Numbers</h2>
+				<div class="stats-grid">
+					<div>
+						<div class="stat-number">2,000+</div>
+						<p>Active Members</p>
+					</div>
+					<div>
+						<div class="stat-number">98%</div>
+						<p>Member Satisfaction Rate</p>
+					</div>
+					<div>
+						<div class="stat-number">50+</div>
+						<p>Weekly Classes</p>
+					</div>
+					<div>
+						<div class="stat-number">15</div>
+						<p>Certified Trainers</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Enhanced Team Section -->
+			<section>
+				<h2>Meet Our Expert Team</h2>
+				<div class="team-grid">
+					<div class="member">
+						<img
+							src="images/about/trainer1.jpg"
+							alt="Saman Maharjan"
+						/>
+						<h4>Saman Maharjan</h4>
+						<p class="role">Head Strength Coach</p>
+						<p class="credentials">
+							NASM Certified • 8 Years Experience<br />
+							Specializes in athletic performance training
+						</p>
+						<blockquote>
+							"My goal is to help students build confidence
+							through strength!"
+						</blockquote>
+					</div>
+					<div class="member">
+						<img
+							src="images/about/trainer2.jpg"
+							alt="Ayush Thapa Magar"
+						/>
+						<h4>Ayush Thapa Magar</h4>
+						<p class="role">Nutrition Specialist</p>
+						<p class="credentials">
+							ISSA Certified • MSc Sports Nutrition<br />
+							Creates personalized meal plans for students
+						</p>
+						<blockquote>
+							"Proper fuel transforms both body and mind!"
+						</blockquote>
+					</div>
+				</div>
+			</section>
+
+			<!-- Community Impact Section -->
+			<section class="community-impact">
+				<h2>Community Impact</h2>
+				<div class="impact-stats">
+					<div class="impact-card">
+						<h3>Student Wellness Program</h3>
+						<p>Partnering with APU's Health Center to provide:</p>
+						<ul class="bullet-point">
+							<li>Free fitness assessments</li>
+							<li>Stress management workshops</li>
+							<li>Posture correction clinics</li>
+						</ul>
+					</div>
+					<div class="impact-card">
+						<h3>Annual Fitness Challenges</h3>
+						<ul class="bullet-point">
+							<li>30-Day Wellness Challenge</li>
+							<li>Inter-School Sports League</li>
+							<li>Charity Fitness Marathon</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<footer class="site-footer">
+			<div class="footer-container">
+				<!-- Logo and Basic Info -->
+				<div class="footer-brand">
+					<img
+						src="images/logo.png"
+						alt="Fitness Hub Logo"
+						class="footer-logo"
+					/>
+					<p class="footer-tagline">Empowering Student Wellness</p>
+					<div class="social-links">
+						<a href="#" aria-label="Facebook"
+							><i class="fab fa-facebook"></i
+						></a>
+						<a href="#" aria-label="Instagram"
+							><i class="fab fa-instagram"></i
+						></a>
+						<a href="#" aria-label="Twitter"
+							><i class="fab fa-twitter"></i
+						></a>
+						<a href="#" aria-label="YouTube"
+							><i class="fab fa-youtube"></i
+						></a>
+					</div>
+				</div>
+
+				<!-- Quick Links -->
+				<div class="footer-nav">
+					<h4 class="footer-heading">Quick Links</h4>
+					<ul>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="programs.html">Programs</a></li>
+						<li><a href="events.html">Events Calendar</a></li>
+						<li><a href="membership.html">Membership</a></li>
+						<li><a href="faq.html">FAQ</a></li>
+						<!-- FAQ Link -->
+					</ul>
+				</div>
+
+				<!-- Contact Info -->
+				<div class="footer-contact">
+					<h4 class="footer-heading">Get in Touch</h4>
+					<ul>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> APU Campus,
+							Bukit Jalil
+						</li>
+						<li><i class="fas fa-phone"></i> +60 12-345 6789</li>
+						<li>
+							<i class="fas fa-envelope"></i> fitness@apu.edu.my
+						</li>
+					</ul>
+				</div>
+
+				<!-- Newsletter -->
+				<div class="footer-newsletter">
+					<h4 class="footer-heading">Stay Updated</h4>
+					<form class="newsletter-form">
+						<input
+							type="email"
+							placeholder="Enter your email"
+							required
+						/>
+						<button type="submit" class="btn-subscribe">
+							Subscribe
+						</button>
+					</form>
+					<p class="newsletter-note">
+						Get fitness tips and event updates
+					</p>
+				</div>
+			</div>
+
+			<!-- Copyright & Legal -->
+			<div class="footer-legal">
+				<p>&copy; 2024 APU Fitness Hub. All rights reserved</p>
+				<div class="legal-links">
+					<a href="privacy.html">Privacy Policy</a>
+					<a href="terms.html">Terms of Service</a>
+				</div>
+			</div>
+		</footer>
+		<script src="js/script.js"></script>
+	</body>
+</html>

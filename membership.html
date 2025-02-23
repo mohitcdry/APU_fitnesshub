@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>APU Fitness Hub - Membership</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<!-- Additional Inline CSS for this page -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		/>
+		<style>
+			:root {
+				--primary: #2ecc71;
+				--dark: #2c3e50;
+				--light: #f8f9fa;
+			}
+
+			body {
+				margin: 0;
+				font-family: "Segoe UI", sans-serif;
+				background: var(--light);
+			}
+
+			.hero {
+				background: linear-gradient(
+						rgba(44, 62, 80, 0.9),
+						rgba(44, 62, 80, 0.9)
+					),
+					url("https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+				height: 60vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				color: white;
+				padding: 2rem;
+			}
+
+			.benefits-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 2rem;
+				padding: 2rem;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+
+			.benefit-card {
+				background: rgba(255, 255, 255, 0.95);
+				border-radius: 20px;
+				padding: 2rem;
+				text-align: center;
+				box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+				transition: transform 0.3s ease;
+				min-height: 350px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+
+			.benefit-card:hover {
+				transform: translateY(-10px);
+			}
+
+			.benefit-icon {
+				font-size: 3rem;
+				color: #2ecc71;
+				margin-bottom: 1rem;
+			}
+
+			.benefit-card h3 {
+				color: #2c3e50;
+				margin: 1rem 0;
+			}
+
+			.benefit-card p {
+				color: #666;
+				line-height: 1.6;
+			}
+
+			.community-highlights {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 2rem;
+				padding: 2rem;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+
+			.highlight-card {
+				background: white;
+				border-radius: 15px;
+				padding: 1.5rem;
+				text-align: center;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+				transition: transform 0.3s ease;
+			}
+
+			.highlight-card:hover{
+				transform: translateY(-5px);
+			}
+
+			.member-count {
+				font-size: 2.5rem;
+				color: #2ecc71;
+				font-weight: bold;
+				margin: 1rem 0;
+			}
+
+			.benefits {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 2rem;
+				padding: 3rem 2rem;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+
+			.benefit-card {
+				background: white;
+				padding: 2rem;
+				border-radius: 15px;
+				text-align: center;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+				transition: transform 0.3s ease;
+			}
+
+			.benefit-card:hover {
+				transform: translateY(-5px);
+			}
+
+			.benefit-icon {
+				font-size: 2.5rem;
+				color: var(--primary);
+				margin-bottom: 1rem;
+			}
+
+			.join-form {
+				max-width: 500px;
+				margin: 2rem auto;
+				padding: 2rem;
+				background: white;
+				border-radius: 15px;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+			}
+
+			.form-input {
+				width: 100%;
+				padding: 1rem;
+				margin: 1rem 0;
+				border: 2px solid #ddd;
+				border-radius: 8px;
+				font-size: 1rem;
+				transition: border-color 0.3s ease;
+			}
+
+			.form-input:focus {
+				border-color: var(--primary);
+				outline: none;
+			}
+
+			.submit-btn {
+				background: var(--primary);
+				color: white;
+				padding: 1rem 2rem;
+				border: none;
+				border-radius: 8px;
+				font-size: 1.1rem;
+				cursor: pointer;
+				width: 100%;
+				transition: transform 0.3s ease;
+			}
+
+			.submit-btn:hover {
+				transform: scale(1.02);
+			}
+
+			.congrats {
+				position: fixed;
+				top: -20px;
+				left: 50%;
+				transform: translateX(-50%);
+				font-size: 3rem;
+				opacity: 0;
+				pointer-events: none;
+				transition: all 1s ease;
+			}
+
+			.congrats h3 p {
+				align-items: center;
+				justify-content: center;
+			}
+
+			.show-congrats {
+				opacity: 1;
+				top: 20%;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Header -->
+		<nav class="navbar">
+			<a href="index.html" class="logo">
+				<img src="images/logo.png" alt="APU Fitness Logo" />
+			</a>
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="programs.html">Programs</a></li>
+				<li><a href="events.html">Events</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			<div class="hamburger">☰</div>
+		</nav>
+
+		<div class="hero">
+			<div>
+				<h1>Join Our Fitness Family 🎉</h1>
+				<h2>
+					Free membership for all APU students - Unleash your
+					potential!
+				</h2>
+			</div>
+		</div>
+
+		<main>
+			<section class="community-highlights">
+				<div class="highlight-card">
+					<div class="member-count">850+</div>
+					<p>Active Members</p>
+				</div>
+				<div class="highlight-card">
+					<div class="member-count">20+</div>
+					<p>Weekly Sessions</p>
+				</div>
+				<div class="highlight-card">
+					<div class="member-count">100%</div>
+					<p>Free Access</p>
+				</div>
+			</section>
+
+			<div class="benefits-grid">
+				<div class="benefit-card">
+					<i class="fas fa-dumbbell benefit-icon"></i>
+					<h3>Premium Facilities</h3>
+					<p>
+						Access to fully-equipped gym, yoga studio, and outdoor
+						fitness areas
+					</p>
+				</div>
+
+				<div class="benefit-card">
+					<i class="fas fa-users benefit-icon"></i>
+					<h3>Expert Guidance</h3>
+					<p>
+						Free workshops and training sessions with certified
+						instructors
+					</p>
+				</div>
+
+				<div class="benefit-card">
+					<i class="fas fa-heartbeat benefit-icon"></i>
+					<h3>Health First</h3>
+					<p>
+						Regular health checkups and nutrition counseling
+						sessions
+					</p>
+				</div>
+
+				<div class="benefit-card">
+					<i class="fas fa-trophy benefit-icon"></i>
+					<h3>Fitness Challenges</h3>
+					<p>
+						Participate in exciting competitions with awesome
+						rewards
+					</p>
+				</div>
+				<div class="benefit-card">
+					<i class="fas fa-trophy benefit-icon"></i>
+					<h3>Fitness Challenges</h3>
+					<p>
+						Participate in exciting competitions with awesome
+						rewards
+					</p>
+				</div>
+				<div class="benefit-card">
+					<i class="fas fa-trophy benefit-icon"></i>
+					<h3>Fitness Challenges</h3>
+					<p>
+						Participate in exciting competitions with awesome
+						rewards
+					</p>
+				</div>
+				
+			</div>
+
+			<div class="join-form">
+				<h2 style="text-align: center; color: var(--dark)">
+					Get Instant Access
+				</h2>
+				<form id="signupForm">
+					<input
+						type="text"
+						class="form-input"
+						placeholder="Your Name"
+						required
+					/>
+					<input
+						type="email"
+						class="form-input"
+						placeholder="APU Email"
+						required
+					/>
+					<select class="form-input" required>
+						<option value="">Choose Your Fitness Goal</option>
+						<option>Build Muscle</option>
+						<option>Lose Weight</option>
+						<option>Stay Active</option>
+						<option>Make Friends</option>
+					</select>
+					<button type="submit" class="submit-btn">
+						Join Now! 🚀
+					</button>
+				</form>
+			</div>
+
+			<div class="congrats" id="congrats">
+				<h3>🎉 Welcome to the Community!</h3>
+				<p>Check your email for verification and next steps</p>
+			</div>
+		</main>
+
+		<footer class="site-footer">
+			<div class="footer-container">
+				<div class="footer-brand">
+					<img
+						src="images/logo.png"
+						alt="Fitness Hub Logo"
+						class="footer-logo"
+					/>
+					<p class="footer-tagline">Empowering Student Wellness</p>
+					<div class="social-links">
+						<a href="#" aria-label="Facebook"
+							><i class="fab fa-facebook"></i
+						></a>
+						<a href="#" aria-label="Instagram"
+							><i class="fab fa-instagram"></i
+						></a>
+						<a href="#" aria-label="Twitter"
+							><i class="fab fa-twitter"></i
+						></a>
+						<a href="#" aria-label="YouTube"
+							><i class="fab fa-youtube"></i
+						></a>
+					</div>
+				</div>
+
+				<!-- Quick Links -->
+				<div class="footer-nav">
+					<h4 class="footer-heading">Quick Links</h4>
+					<ul>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="programs.html">Programs</a></li>
+						<li><a href="events.html">Events Calendar</a></li>
+						<li><a href="membership.html">Membership</a></li>
+						<li><a href="faq.html">FAQ</a></li>
+						<!-- FAQ Link -->
+					</ul>
+				</div>
+
+				<!-- Contact Info -->
+				<div class="footer-contact">
+					<h4 class="footer-heading">Get in Touch</h4>
+					<ul>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> APU Campus,
+							Bukit Jalil
+						</li>
+						<li><i class="fas fa-phone"></i> +60 12-345 6789</li>
+						<li>
+							<i class="fas fa-envelope"></i> fitness@apu.edu.my
+						</li>
+					</ul>
+				</div>
+
+				<!-- Newsletter -->
+				<div class="footer-newsletter">
+					<h4 class="footer-heading">Stay Updated</h4>
+					<form class="newsletter-form">
+						<input
+							type="email"
+							placeholder="Enter your email"
+							required
+						/>
+						<button type="submit" class="btn-subscribe">
+							Subscribe
+						</button>
+					</form>
+					<p class="newsletter-note">
+						Get fitness tips and event updates
+					</p>
+				</div>
+			</div>
+
+			<!-- Copyright & Legal -->
+			<div class="footer-legal">
+				<p>&copy; 2024 APU Fitness Hub. All rights reserved</p>
+				<div class="legal-links">
+					<a href="privacy.html">Privacy Policy</a>
+					<a href="terms.html">Terms of Service</a>
+				</div>
+			</div>
+		</footer>
+		<script src="js/script.js"></script>
+		<script>
+			document
+				.getElementById("signupForm")
+				.addEventListener("submit", function (e) {
+					e.preventDefault();
+
+					const congrts = document.getElementById("congrats");
+					congrts.classList.add("show-congrats");
+
+					setTimeout(() => {
+						congrts.classList.remove("show-congrats");
+						this.reset();
+					}, 2000);
+				});
+		</script>
+	</body>
+</html>

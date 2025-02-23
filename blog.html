@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Blog - APU Fitness Hub</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		/>
+		<style>
+			.blog-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+				gap: 2.5rem;
+				padding: 3rem;
+				max-width: 1400px;
+				margin: 0 auto;
+			}
+
+			.blog-card {
+				background: white;
+				border-radius: 15px;
+				overflow: hidden;
+				box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+				transition: all 0.3s ease;
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+			}
+
+			.blog-card:hover {
+				transform: translateY(-10px);
+				box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+			}
+
+			.blog-image {
+				height: 250px;
+				background-size: cover;
+				background-position: center;
+				transition: all 0.3s ease;
+			}
+
+			.blog-card:hover .blog-image {
+				transform: scale(1.05);
+			}
+
+			.blog-content {
+				padding: 2rem;
+				flex-grow: 1;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.blog-content h3 {
+				font-size: 1.4rem;
+				margin: 1rem 0;
+				color: var(--dark);
+				line-height: 1.4;
+			}
+
+			.post-meta {
+				display: flex;
+				justify-content: space-between;
+				color: #666;
+				font-size: 0.9rem;
+			}
+
+			.post-meta i {
+				margin-right: 5px;
+				color: var(--primary);
+			}
+
+			.tag {
+				background: var(--gradient);
+				color: white;
+				padding: 0.4rem 1rem;
+				border-radius: 20px;
+				font-size: 0.8rem;
+				display: inline-block;
+				margin: 0.5rem 0.5rem 0.5rem 0;
+				transition: all 0.3s ease;
+			}
+
+			.tag:hover {
+				transform: translateY(-2px);
+			}
+
+			.read-more {
+				margin-top: auto;
+				align-self: flex-start;
+				padding: 0.8rem 1.8rem;
+				background: var(--primary);
+				color: white;
+				border-radius: 25px;
+				text-decoration: none;
+				transition: all 0.3s ease;
+				font-weight: 600;
+			}
+
+			.read-more:hover {
+				background: var(--secondary);
+				transform: translateX(5px);
+			}
+
+			@media (max-width: 768px) {
+				.blog-grid {
+					padding: 1.5rem;
+					gap: 1.5rem;
+				}
+
+				.blog-content h3 {
+					font-size: 1.2rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar">
+			<a href="index.html" class="logo"
+				><img src="images/logo.png" alt="APU Fitness Logo"
+			/></a>
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="programs.html">Programs</a></li>
+				<li><a href="events.html">Events</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			<div class="hamburger">☰</div>
+		</nav>
+
+		<div class="hero">
+			<h1>Fitness & Wellness Blog</h1>
+			<p>Expert advice, success stories, and the latest health trends</p>
+		</div>
+
+		<main>
+			<div class="blog-grid">
+				<article class="blog-card">
+					<div
+						class="blog-image"
+						style="
+							background-image: url('images/blog/nutra_tips.jpeg');
+						"
+					></div>
+					<div class="blog-content">
+						<div class="post-meta">
+							<span
+								><i class="far fa-calendar"></i>Mar 15,
+								2024</span
+							>
+							<span><i class="far fa-clock"></i>5 min read</span>
+						</div>
+						<h3>5 Science Nutrition Tips for Students</h3>
+						<div class="tag">Nutrition</div>
+						<div class="tag">Healthy Eating</div>
+						<p>
+							Discover simple strategies to maintain a balanced
+							diet during your busy academic life...
+						</p>
+						<a href="#" class="read-more">Read More →</a>
+					</div>
+				</article>
+
+				<article class="blog-card">
+					<div
+						class="blog-image"
+						style="
+							background-image: url('images/blog/first_workout_routine.jpeg');
+						"
+					></div>
+					<div class="blog-content">
+						<div class="post-meta">
+							<span
+								><i class="far fa-calendar"></i>Mar 10,
+								2024</span
+							>
+							<span><i class="far fa-clock"></i>8 min read</span>
+						</div>
+						<h3>
+							Building Your First Workout Routine: A Beginner's
+							Guide
+						</h3>
+						<div class="tag">Fitness</div>
+						<div class="tag">Training</div>
+						<p>
+							<br />Learn how to create an effective exercise plan
+							that fits your schedule and goals with
+							consistency...
+						</p>
+						<a href="#" class="read-more">Read More →</a>
+					</div>
+				</article>
+
+				<article class="blog-card">
+					<div
+						class="blog-image"
+						style="
+							background-image: url('images/blog/mind_body.jpeg');
+						"
+					></div>
+					<div class="blog-content">
+						<div class="post-meta">
+							<span
+								><i class="far fa-calendar"></i>Mar 5,
+								2024</span
+							>
+							<span><i class="far fa-clock"></i>6 min read</span>
+						</div>
+						<h3>
+							Mind & Body: The Connection Between Fitness and
+							Mental Health
+						</h3>
+						<div class="tag">Wellness</div>
+						<div class="tag">Mental Health</div>
+						<p>
+							Explore how regular exercise can improve your mental
+							wellbeing and academic performance...
+						</p>
+						<a href="#" class="read-more">Read More →</a>
+					</div>
+				</article>
+
+				<article class="blog-card">
+					<div
+						class="blog-image"
+						style="
+							background-image: url('images/blog/brain_food.png');
+						"
+					></div>
+					<div class="blog-content">
+						<div class="post-meta">
+							<span
+								><i class="far fa-calendar"></i>Mar 20,
+								2024</span
+							>
+							<span><i class="far fa-clock"></i>5 min read</span>
+						</div>
+						<h3>Brain Food: What to Eat During Exam Season</h3>
+						<div class="tag">Nutrition</div>
+						<div class="tag">Study Tips</div>
+						<p>
+							Top foods and supplements that boost memory and
+							concentration. Plus, meal prep ideas for busy study
+							sessions...
+						</p>
+						<a href="#" class="read-more">Read More →</a>
+					</div>
+				</article>
+
+				<article class="blog-card">
+					<div
+						class="blog-image"
+						style="
+							background-image: url('images/blog/calisthenic.png');
+						"
+					></div>
+					<div class="blog-content">
+						<div class="post-meta">
+							<span
+								><i class="far fa-calendar"></i>Mar 15,
+								2024</span
+							>
+							<span><i class="far fa-clock"></i>7 min read</span>
+						</div>
+						<h3>Calisthenics: No Equipment Needed</h3>
+						<div class="tag">Fitness</div>
+						<div class="tag">Student Life</div>
+						<p>
+							Stay fit in your dorm with these effective
+							bodyweight exercises. Perfect for busy students with
+							limited time...
+						</p>
+						<a href="#" class="read-more">Read More →</a>
+					</div>
+				</article>
+
+				<article class="blog-card">
+					<div
+						class="blog-image"
+						style="
+							background-image: url('images/blog/budget_meal.png');
+						"
+					></div>
+					<div class="blog-content">
+						<div class="post-meta">
+							<span
+								><i class="far fa-calendar"></i>Mar 12,
+								2024</span
+							>
+							<span><i class="far fa-clock"></i>6 min read</span>
+						</div>
+						<h3>Healthy Meals Under RM15: Student Budget Guide</h3>
+						<div class="tag">Budget</div>
+						<div class="tag">Nutrition</div>
+						<p>
+							Delicious and nutritious meal ideas that won't break
+							your student budget. Includes local Malaysian
+							ingredients...
+						</p>
+						<a href="#" class="read-more">Read More →</a>
+					</div>
+				</article>
+
+				<article class="blog-card">
+					<div
+						class="blog-image"
+						style="
+							background-image: url('images/blog/mental_health.png');
+						"
+					></div>
+					<div class="blog-content">
+						<div class="post-meta">
+							<span
+								><i class="far fa-calendar"></i>Mar 8,
+								2024</span
+							>
+							<span><i class="far fa-clock"></i>8 min read</span>
+						</div>
+						<h3>Exercise for Mental Clarity: Student's Guide</h3>
+						<div class="tag">Mental Health</div>
+						<div class="tag">Wellness</div>
+						<p>
+							Discover how quick workout sessions can improve your
+							study performance and reduce academic stress...
+						</p>
+						<a href="#" class="read-more">Read More →</a>
+					</div>
+				</article>
+
+				<article class="blog-card">
+					<div
+						class="blog-image"
+						style="background-image: url('images/blog/balance.png')"
+					></div>
+					<div class="blog-content">
+						<div class="post-meta">
+							<span
+								><i class="far fa-calendar"></i>Mar 5,
+								2024</span
+							>
+							<span><i class="far fa-clock"></i>6 min read</span>
+						</div>
+						<h3>Balancing Academics and Fitness</h3>
+						<div class="tag">Student Life</div>
+						<div class="tag">Time Management</div>
+						<p>
+							Expert tips on creating a schedule that prioritizes
+							both your studies and health. Real stories from APU
+							students...
+						</p>
+						<a href="#" class="read-more">Read More →</a>
+					</div>
+				</article>
+
+				<article class="blog-card">
+					<div
+						class="blog-image"
+						style="
+							background-image: url('images/blog/social_fitness.png');
+						"
+					></div>
+					<div class="blog-content">
+						<div class="post-meta">
+							<span
+								><i class="far fa-calendar"></i>Mar 1,
+								2024</span
+							>
+							<span><i class="far fa-clock"></i>5 min read</span>
+						</div>
+						<h3>Making Friends Through Fitness</h3>
+						<div class="tag">Community</div>
+						<div class="tag">Social</div>
+						<p>
+							How joining fitness groups can expand your social
+							circle and make working out more enjoyable...
+						</p>
+						<a href="#" class="read-more">Read More →</a>
+					</div>
+				</article>
+			</div>
+		</main>
+		<footer class="site-footer">
+			<div class="footer-container">
+				<div class="footer-brand">
+					<img
+						src="images/logo.png"
+						alt="Fitness Hub Logo"
+						class="footer-logo"
+					/>
+					<p class="footer-tagline">Empowering Student Wellness</p>
+					<div class="social-links">
+						<a href="#" aria-label="Facebook"
+							><i class="fab fa-facebook"></i
+						></a>
+						<a href="#" aria-label="Instagram"
+							><i class="fab fa-instagram"></i
+						></a>
+						<a href="#" aria-label="Twitter"
+							><i class="fab fa-twitter"></i
+						></a>
+						<a href="#" aria-label="YouTube"
+							><i class="fab fa-youtube"></i
+						></a>
+					</div>
+				</div>
+
+				<div class="footer-nav">
+					<h4 class="footer-heading">Quick Links</h4>
+					<ul>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="programs.html">Programs</a></li>
+						<li><a href="events.html">Events Calendar</a></li>
+						<li><a href="membership.html">Membership</a></li>
+						<li><a href="faq.html">FAQ</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-contact">
+					<h4 class="footer-heading">Get in Touch</h4>
+					<ul>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> APU Campus,
+							Bukit Jalil
+						</li>
+						<li><i class="fas fa-phone"></i> +60 12-345 6789</li>
+						<li>
+							<i class="fas fa-envelope"></i> fitness@apu.edu.my
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer-newsletter">
+					<h4 class="footer-heading">Stay Updated</h4>
+					<form class="newsletter-form">
+						<input
+							type="email"
+							placeholder="Enter your email"
+							required
+						/>
+						<button type="submit" class="btn-subscribe">
+							Subscribe
+						</button>
+					</form>
+					<p class="newsletter-note">
+						Get fitness tips and event updates
+					</p>
+				</div>
+			</div>
+
+			<div class="footer-legal">
+				<p>&copy; 2024 APU Fitness Hub. All rights reserved</p>
+				<div class="legal-links">
+					<a href="privacy.html">Privacy Policy</a>
+					<a href="terms.html">Terms of Service</a>
+				</div>
+			</div>
+		</footer>
+		<script src="js/script.js"></script>
+	</body>
+</html>
